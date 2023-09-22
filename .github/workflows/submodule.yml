@@ -8,3 +8,9 @@ jobs:
 
         steps:
             - run: echo "hello submodule" 
+            - name: Setup node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 16
+            - name: Do something
+              run: node hello.js
